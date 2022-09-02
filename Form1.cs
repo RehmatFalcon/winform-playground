@@ -1,4 +1,6 @@
+using Dapper;
 using Playground.Forms;
+using Playground.Models;
 using System.ComponentModel;
 using System.Data;
 
@@ -47,12 +49,20 @@ namespace Playground
 
         private bool IsUserPasswordSame(string username, string password)
         {
+            // get connection
+            var hashed = BCrypt.Net.BCrypt.HashPassword("admin");
+            usernameElm.Text = hashed;
             using var conn = ConnectionProvider.GetDbConnection();
 
-            var query = "SELECT * FROM user where username = ";
+            // Define query
+            var query = $"SELECT * FROM `user` WHERE Name = @user_name;";
 
-            if (username == "hola") return true;
-            else return false;
+            // Execution
+            var user = conn.QueryFirstOrDefault<User>(query, new {
+                user_name = username 
+            });
+            if (user == null) return false;
+            else return true;
         }
     }
 }

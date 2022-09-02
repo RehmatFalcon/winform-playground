@@ -12,7 +12,7 @@ namespace Playground
     {
         public static IDbConnection GetDbConnection()
         {
-            return new MySqlConnection("Server=localhost;Database=dbName;Uid=root;Pwd=;");
+            return new MySqlConnection("Server=localhost;Database=inventory;Uid=root;Pwd=;");
         }
     }
 }

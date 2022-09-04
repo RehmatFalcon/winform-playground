@@ -30,8 +30,9 @@
         {
             this.b1 = new System.Windows.Forms.ComboBox();
             this.submitBtn = new System.Windows.Forms.Button();
-            this.hola = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.usernameElm = new System.Windows.Forms.TextBox();
+            this.pwdTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // b1
@@ -52,14 +53,14 @@
             this.submitBtn.Text = "button1";
             this.submitBtn.UseVisualStyleBackColor = true;
             // 
-            // hola
+            // registerBtn
             // 
-            this.hola.Location = new System.Drawing.Point(330, 317);
-            this.hola.Name = "hola";
-            this.hola.Size = new System.Drawing.Size(94, 29);
-            this.hola.TabIndex = 2;
-            this.hola.Text = "button1";
-            this.hola.UseVisualStyleBackColor = true;
+            this.registerBtn.Location = new System.Drawing.Point(330, 317);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(94, 29);
+            this.registerBtn.TabIndex = 2;
+            this.registerBtn.Text = "button1";
+            this.registerBtn.UseVisualStyleBackColor = true;
             // 
             // usernameElm
             // 
@@ -68,13 +69,21 @@
             this.usernameElm.Size = new System.Drawing.Size(125, 27);
             this.usernameElm.TabIndex = 3;
             // 
+            // pwdTxt
+            // 
+            this.pwdTxt.Location = new System.Drawing.Point(424, 30);
+            this.pwdTxt.Name = "pwdTxt";
+            this.pwdTxt.Size = new System.Drawing.Size(125, 27);
+            this.pwdTxt.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pwdTxt);
             this.Controls.Add(this.usernameElm);
-            this.Controls.Add(this.hola);
+            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.b1);
             this.Name = "Form1";
@@ -88,7 +97,8 @@
 
         private ComboBox b1;
         private Button submitBtn;
-        private Button hola;
+        private Button registerBtn;
         private TextBox usernameElm;
+        private TextBox pwdTxt;
     }
 }
